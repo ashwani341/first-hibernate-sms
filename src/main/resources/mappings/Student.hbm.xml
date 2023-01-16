@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+  <class name="com.cdac.pojos.Student" table="students">
+    <!-- names should be same as in the related pojo -->    
+    <!-- To specify the primary key column -->
+    <id name="rollNo" type="int">
+      <!-- To generate the id filed automatically -->
+      <generator class="native"></generator>
+    </id>
+    <property name="name"></property>
+    <property name="course"></property>
+  </class>
+</hibernate-mapping>

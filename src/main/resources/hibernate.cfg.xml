@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <!-- To specify the datbase related details -->
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost/sms</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    
+    <!-- To show the sql commands used by the hql(hibernate query language) -->
+    <property name="show_sql">true</property>
+    <!-- To specify what to do with the table e.g. create, update etc. -->
+    <property name="hbm2ddl.auto">update</property>
+    <mapping resource="mappings/Student.hbm.xml"></mapping>
+  </session-factory>
+</hibernate-configuration>
